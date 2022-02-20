@@ -32,6 +32,13 @@ implementing the trait owns memory other than the struct itself.
 
 For example, a `Vec<T: MemoryReport>` will report the full memory capacity it has reserved: `self.capacity() * T::direct()`.
 
+Code example:
+```
+let vec_of_usizes: Vec<usize> = vec![1, 2, 3, 4];
+
+println!("{}", vec_of_usizes.indirect());
+```
+
 ### `children` memory report
 
 Function signature: `fn children(&self) -> usize`
@@ -44,6 +51,13 @@ For example, a `Vec<T: MemoryReport>` or `&[T]` will report the memory that the 
 A `Vec<usize>` will report 0, as an `usize` does not allocate memory, but a `&[Vec<usize>]` will report some memory, as
 a `Vec<usize>` does allocate memory.
 
+Code example:
+```
+let vec_of_vecs_of_usize: Vec<Vec<usize>> = vec![vec![1], vec![2], vec![3]];
+
+println!("{}", vec_of_vecs_of_usize.children());
+```
+
 
 ## Implementors
 
@@ -52,7 +66,7 @@ some `core` and `std` objects.
 
 See below a list of all default implementors. This list may change in the future.
 
-Integers
+#### Integers
 
 * i8
 * i16
@@ -61,7 +75,7 @@ Integers
 * i128
 * isize
 
-Unsigned integers
+#### Unsigned integers
 
 * u8
 * u16
@@ -70,18 +84,29 @@ Unsigned integers
 * u128
 * usize
 
-Floats and misc.
+#### Floats and misc.
 
 * f32
 * f64
 * bool
 * char
 
-Heap allocated
+#### Heap allocated
 
 * Vec
 * HashMap
 
-Pointers and references
+#### Pointers and references
 
 * &T
+
+
+## Future plans
+
+[ ] Creation of a derive macro
+[ ] Further implementations of the `core` and `std` objects
+
+
+## License
+
+Mozilla Public License Version 2.0

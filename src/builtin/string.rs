@@ -31,3 +31,24 @@ impl MemoryReport for &str {
         0
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn direct() {
+        assert!((core::mem::size_of::<usize>() * 3) == String::direct());
+    }
+
+    #[test]
+    fn indirect() {
+        assert!((core::mem::size_of::<u8>() * 4) == String::with_capacity(4).indirect());
+    }
+
+    #[test]
+    fn children() {
+        assert!(0 == String::from("TEST").children());
+    }
+}
