@@ -103,8 +103,8 @@ See below a list of all default implementors. This list may change in the future
 
 ## Future plans
 
-[] Creation of a derive macro
-[] Further implementations of the `core` and `std` objects
+- [] Creation of a derive macro
+- [] Further implementations of the `core` and `std` objects
 
 
 ## License
