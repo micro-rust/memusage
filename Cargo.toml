@@ -1,0 +1,12 @@
+[package]
+name = "memusage"
+version = "0.1.0"
+edition = "2021"
+authors = ["Andres <agrc14@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/micro-rust/memusage"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
