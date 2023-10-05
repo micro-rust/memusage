@@ -3,6 +3,10 @@
 //! To use this crate simply import the `MemoryReport` trait. This gives access
 //! to 3 methods `T::direct()`, `T::indirect(&self)` and `T::children(&self)`.
 //! The total memory usage of a `struct` will be the sum of the 3 measurements.
+//! 
+//! All measurements for allocating structs (e.g. `HashMap`) are estimations.
+//! This is due to hidden fields in these structs, compiler optmimizations and
+//! other miscellaneous effects.
 
 
 
