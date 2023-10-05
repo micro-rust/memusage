@@ -1,8 +1,9 @@
-//! Implementation of `MemoryReport` for `Vec`.
+//! Implementation of `MemoryReport` for `Vec` and `VecDeque`.
 
 
 
 use crate::MemoryReport;
+use std::collections::VecDeque;
 
 
 
@@ -20,6 +21,24 @@ impl<T: MemoryReport> MemoryReport for Vec<T> {
         self.iter().map(|x| x.indirect() + x.children()).sum()
     }
 }
+
+
+
+impl<T: MemoryReport> MemoryReport for VecDeque<T> {
+    const ALLOC: bool = true;
+    const CHILD: bool = true;
+
+    fn indirect(&self) -> usize {
+        self.capacity() * T::direct()
+    }
+
+    fn children(&self) -> usize {
+        if !(T::ALLOC || T::CHILD) { return 0; }
+
+        self.iter().map(|x| x.indirect() + x.children()).sum()
+    }
+}
+
 
 
 
