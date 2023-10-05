@@ -19,7 +19,7 @@ The `MemoryReport` trait includes three associated methods: `direct`, `indirect`
 
 Function signature: `fn direct() -> usize`
 
-The spirit (and implementation) of this memory report is to beequivalent to `core::mem::size_of::<Self>()`.
+The spirit (and implementation) of this memory report is to be equivalent to `core::mem::size_of::<Self>()`.
 This method is used mainly for ease of use.
 
 ### `indirect` memory report
