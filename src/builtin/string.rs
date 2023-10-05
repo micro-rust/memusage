@@ -3,6 +3,7 @@
 
 
 use crate::MemoryReport;
+use alloc::string::String;
 
 
 

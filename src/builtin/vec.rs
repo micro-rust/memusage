@@ -3,7 +3,10 @@
 
 
 use crate::MemoryReport;
-use std::collections::VecDeque;
+use alloc::{
+    collections::VecDeque,
+    vec::Vec,
+};
 
 
 
@@ -58,6 +61,6 @@ mod tests {
 
     #[test]
     fn children() {
-        assert!(0 == vec![0usize, 1, 2, 3].children());
+        assert!(0 == alloc::vec![0usize, 1, 2, 3].children());
     }
 }

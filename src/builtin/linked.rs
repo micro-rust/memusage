@@ -3,7 +3,7 @@
 
 
 use crate::MemoryReport;
-use std::collections::LinkedList;
+use alloc::collections::LinkedList;
 
 
 

@@ -18,6 +18,15 @@ keywords = ["utility", "memory", "usage"]
 categories = ["memory-management"]
 
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+
+
+[features]
+
+# Enable alloc types by default.
+default = ["alloc"]
+
+# Enable alloc types.
+alloc = []

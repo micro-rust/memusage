@@ -3,7 +3,7 @@
 
 
 use crate::MemoryReport;
-use std::collections::{
+use alloc::collections::{
     BTreeMap, BTreeSet,
 };
 

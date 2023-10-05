@@ -3,7 +3,7 @@
 
 
 use crate::MemoryReport;
-use std::collections::BinaryHeap;
+use alloc::collections::BinaryHeap;
 
 
 
