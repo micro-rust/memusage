@@ -1,5 +1,8 @@
 //! Memusage is a simple dependency for memory usage autoreporting.
 //! It contains a single trait an default implementations for `core` and `std`.
+//! To use this crate simply import the `MemoryReport` trait. This gives access
+//! to 3 methods `T::direct()`, `T::indirect(&self)` and `T::children(&self)`.
+//! The total memory usage of a `struct` will be the sum of the 3 measurements.
 
 
 
