@@ -26,7 +26,10 @@ categories = ["memory-management"]
 [features]
 
 # Enable alloc types by default.
-default = ["alloc"]
+default = ["alloc", "std"]
 
 # Enable alloc types.
 alloc = []
+
+# Enable std types.
+std = []
