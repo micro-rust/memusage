@@ -95,6 +95,11 @@ See below a list of all default implementors. This list may change in the future
 
 * Vec
 * HashMap
+* HashSet
+* BinaryHeap
+* LinkedList
+* BTreeMap
+* BTreeSet
 
 #### Pointers and references
 
